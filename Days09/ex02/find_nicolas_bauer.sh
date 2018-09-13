@@ -1,0 +1,1 @@
+curl https://projects.intra.42.fr/uploads/document/document/266/contacts_hard.txt | grep -i "bomber" | grep -i "nicolas" | grep -v "Sally" | awk '{print $(NF - 1) " " $(NF - 2)}' | tr -d 'BomberNicolas'

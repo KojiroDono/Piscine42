@@ -1,0 +1,5 @@
+Credentials cache: API:D3FDBC2C-3D1F-468D-B509-4B60532E2EE2
+        Principal: auguyon@42.FR
+
+		  Issued                Expires               Principal
+		  Aug 27 13:23:59 2018  Sep  3 13:23:46 2018  krbtgt/42.FR@42.FR
