@@ -6,7 +6,7 @@
 /*   By: jergauth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 13:52:32 by jergauth          #+#    #+#             */
-/*   Updated: 2018/09/16 14:11:30 by jergauth         ###   ########.fr       */
+/*   Updated: 2018/09/16 17:11:51 by jergauth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,8 @@ char	*rush(int x, int y, char (*f)(int, int, int, int))
 	int		r;
 	int		c;
 	char	*str;
-	int		size;
 
-	size = (x + 1) * y + 1;
-	str = (char*)malloc(sizeof(*str) * size);
+	str = (char*)malloc(sizeof(*str) * (((x + 1) * y) + 1));
 	if (x > 0 && y > 0)
 	{
 		r = 0;

@@ -6,13 +6,11 @@
 /*   By: jergauth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/01 13:55:08 by jergauth          #+#    #+#             */
-/*   Updated: 2018/09/16 14:01:52 by jergauth         ###   ########.fr       */
+/*   Updated: 2018/09/16 17:31:36 by jergauth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/colle.h"
-#include <stdio.h>
-#include <string.h>
 
 int		main(int argc, char **argv)
 {
@@ -34,7 +32,12 @@ int		main(int argc, char **argv)
 		i = 0;
 		str = str_alloc();
 		size = find_x_y(str);
-		printf("%i, %i", size.x, size.y);
+		if (size.x <= 0 && size.y <= 0)
+		{
+			ft_putstr("aucune");
+			ft_putchar('\n');
+			return (0);
+		}
 		while (i < 5)
 		{
 			if (!ft_strcmp(str, rush(size.x, size.y, f[i])))

@@ -6,7 +6,7 @@
 /*   By: jergauth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 12:02:33 by jergauth          #+#    #+#             */
-/*   Updated: 2018/09/16 14:02:10 by jergauth         ###   ########.fr       */
+/*   Updated: 2018/09/16 15:18:44 by jergauth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,20 @@ char			*ft_strcpy(char *dest, char *src);
 int				ft_atoi(char *str);
 
 t_dim			find_x_y(char *str);
+
+
+char			*ft_strdup(char *src);
+
+typedef	struct		s_list
+{
+	struct s_list	*next;
+	void			*data;
+}					t_list;
+
+t_list				*ft_create_elem(void *data);
+
+void				print_list(t_list **begin_list);
+
+void				ft_list_push_back(t_list **begin_list, void *data);
 
 #endif

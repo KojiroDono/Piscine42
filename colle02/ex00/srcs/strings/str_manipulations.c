@@ -6,7 +6,7 @@
 /*   By: jergauth <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/09/15 23:22:00 by jergauth          #+#    #+#             */
-/*   Updated: 2018/09/16 13:50:36 by jergauth         ###   ########.fr       */
+/*   Updated: 2018/09/16 17:11:27 by jergauth         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,31 +46,6 @@ char	*ft_strcpy(char *dest, char *src)
 	}
 	dest[i] = '\0';
 	return (dest);
-}
-
-int		ft_atoi(char *str)
-{
-	int i;
-	int is_neg;
-	int res;
-
-	i = 0;
-	is_neg = 0;
-	res = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-')
-		is_neg = 1;
-	if (str[i] == '-' || str[i] == '+')
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		res = res * 10 + str[i] - 48;
-		i++;
-	}
-	if (is_neg)
-		return (-res);
-	return (res);
 }
 
 t_dim	find_x_y(char *str)
